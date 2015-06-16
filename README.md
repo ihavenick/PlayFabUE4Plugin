@@ -33,7 +33,7 @@ To use the plugin all you do is drag an API call onto your Event Graph. The API 
 
 ![PlayFabBluePrintMenu](PlayFabBluePrintMenu.jpg)
 
-Attach the node to an event, pass in the required variables and then attach whatever you want to handle the respons up to the graph like below.
+Attach the node to an event, pass in the required variables and then attach whatever you want to handle the response up to the graph like below.
 
 ![LoginEvent](LoginEvent.jpg)
 
