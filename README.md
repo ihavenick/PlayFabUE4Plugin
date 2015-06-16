@@ -5,17 +5,39 @@ PlayFab is the PlayFab integration plugin for [Unreal Engine 4](https://www.unre
 
 Key features:
 
-* Flexible Http/Https request management with support of different Verbs and Content Types
 * **No C++ coding required**, everything can be managed via blueprints
 * Blueprintable FJsonObject wrapper with almost full support of Json features: different types of values, **arrays**, both ways serializarion to FString, etc.
 * Blueprintable FJsonValue wrapper - **full Json features made for blueprints!**
 * [PlayFab](https://PlayFab.com) REST API manager to start working with PlayFab out of the box!
 
-Check the [Wiki](https://github.com/JLyons1985/PlayFabUE4Plugin/wiki) tab for plugin usage examples and installation notes.
-
 Current version: **1.0**
 
-![SCREENSHOT](SCREENSHOT.jpg)
+Installation:
+
+* Copy all files into your plugins folder. <Projet>/Plugins/PlayFab/
+* Generate Visual Studio Files for your project.
+* Rebuild your game. **That is it!**
+
+Setup:
+
+* Navigate to the PlayFabProxy.cpp file in the Plugins/PlayFab/Source/PlayFab/Private/PlayFabProxy.cpp 
+* Edit the top part of the file to match the AppId and SecretKeys provided to you by PlayFab.
+* Replace <AppId> with your TitleID
+* Replace <SecretKey> with your secret key given to you by PlayFab.
+
+![CppSetup](CppSetup.jpg)
+
+Use:
+
+To use the plugin all you do is drag an API call onto your Event Graph. The API calls can be found under PlayFab and then either Client or Server as can seen in the image below.
+
+![PlayFabBluePrintMenu](PlayFabBluePrintMenu.jpg)
+
+Attach the node to an event, pass in the required variables and then attach whatever you want to handle the respons up to the graph like below.
+
+![LoginEvent](LoginEvent.jpg)
+
+**That is all it takes!** The PlayFab nodes will send out the API call, wait for a response and pass back the response from the PlayFab servers. Take a look at their documentation to see what each API call returns and expects.
 
 
 Legal info

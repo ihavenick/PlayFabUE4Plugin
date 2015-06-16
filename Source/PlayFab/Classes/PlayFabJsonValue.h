@@ -11,7 +11,7 @@ class UPlayFabJsonObject;
  * Represents all the types a Json Value can be.
  */
 UENUM(BlueprintType)
-namespace EVaJson
+namespace EPFJson
 {
 	enum Type
 	{
@@ -69,7 +69,7 @@ class UPlayFabJsonValue : public UObject
 
 	/** Get type of Json value (Enum) */
 	UFUNCTION(BlueprintCallable, Category = "PlayFab|Json")
-	EVaJson::Type GetType() const;
+	EPFJson::Type GetType() const;
 
 	/** Get type of Json value (String) */
 	UFUNCTION(BlueprintCallable, Category = "PlayFab|Json")

@@ -1,6 +1,6 @@
 // Copyright 2014 Vladimir Alyamkin. All Rights Reserved.
 
-#include "PlayFabPluginPrivatePCH.h"
+#include "PlayFabPrivatePCH.h"
 
 typedef TJsonWriterFactory< TCHAR, TCondensedJsonPrintPolicy<TCHAR> > FCondensedJsonStringWriterFactory;
 typedef TJsonWriter< TCHAR, TCondensedJsonPrintPolicy<TCHAR> > FCondensedJsonStringWriter;
@@ -233,30 +233,30 @@ void UPlayFabJsonObject::SetArrayField(const FString& FieldName, const TArray<UP
 
 		switch (InVal->GetType())
 		{
-		case EVaJson::None:
+		case EPFJson::None:
 			break;
 
-		case EVaJson::Null:
+		case EPFJson::Null:
 			ValArray.Add(MakeShareable(new FJsonValueNull()));
 			break;
 
-		case EVaJson::String:
+		case EPFJson::String:
 			ValArray.Add(MakeShareable(new FJsonValueString(JsonVal->AsString())));
 			break;
 
-		case EVaJson::Number:
+		case EPFJson::Number:
 			ValArray.Add(MakeShareable(new FJsonValueNumber(JsonVal->AsNumber())));
 			break;
 
-		case EVaJson::Boolean:
+		case EPFJson::Boolean:
 			ValArray.Add(MakeShareable(new FJsonValueBoolean(JsonVal->AsBool())));
 			break;
 
-		case EVaJson::Array:
+		case EPFJson::Array:
 			ValArray.Add(MakeShareable(new FJsonValueArray(JsonVal->AsArray())));
 			break;
 
-		case EVaJson::Object:
+		case EPFJson::Object:
 			ValArray.Add(MakeShareable(new FJsonValueObject(JsonVal->AsObject())));
 			break;
 

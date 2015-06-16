@@ -1,6 +1,6 @@
 // Copyright 2014 Vladimir Alyamkin. All Rights Reserved.
 
-#include "PlayFabPluginPrivatePCH.h"
+#include "PlayFabPrivatePCH.h"
 
 UPlayFabJsonValue::UPlayFabJsonValue(const class FObjectInitializer& PCIP)
 	: Super(PCIP)
@@ -89,38 +89,38 @@ void UPlayFabJsonValue::SetRootValue(TSharedPtr<FJsonValue>& JsonValue)
 //////////////////////////////////////////////////////////////////////////
 // FJsonValue API
 
-EVaJson::Type UPlayFabJsonValue::GetType() const
+EPFJson::Type UPlayFabJsonValue::GetType() const
 {
 	if (!JsonVal.IsValid())
 	{
-		return EVaJson::None;
+		return EPFJson::None;
 	}
 
 	switch (JsonVal->Type)
 	{
 	case EJson::None:
-		return EVaJson::None;
+		return EPFJson::None;
 
 	case EJson::Null:
-		return EVaJson::Null;
+		return EPFJson::Null;
 
 	case EJson::String:
-		return EVaJson::String;
+		return EPFJson::String;
 
 	case EJson::Number:
-		return EVaJson::Number;
+		return EPFJson::Number;
 
 	case EJson::Boolean:
-		return EVaJson::Boolean;
+		return EPFJson::Boolean;
 
 	case EJson::Array:
-		return EVaJson::Array;
+		return EPFJson::Array;
 
 	case EJson::Object:
-		return EVaJson::Object;
+		return EPFJson::Object;
 
 	default:
-		return EVaJson::None;
+		return EPFJson::None;
 	}
 }
 
