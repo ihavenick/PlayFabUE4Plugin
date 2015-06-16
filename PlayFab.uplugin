@@ -1,0 +1,23 @@
+{
+	"FileVersion" : 3,
+	"PluginFileVersion" : 1,
+
+	"FriendlyName" : "PlayFabSDK",
+	"Version" : 1,
+	"VersionName" : "0.1",
+	"CreatedBy" : "Joshua Lyons, 2015", 
+	"CreatedByURL" : "http://www.lyonsdensoftware.com",
+	"EngineVersion" : "4.8.0",
+	"Description" : "PlayFab SDK for Unreal Engine 4. This is a beta version of the SDK created by Joshua Lyons to work in his game Tabletop Arena.",
+	"Category" : "PlayFab.PlayFabSDK",
+	"EnabledByDefault" : true,
+	"CanContainContent": true,
+	"Modules" :
+	[		
+		{
+			"Name" : "PlayFab",
+			"Type" : "Runtime",
+			"LoadingPhase" : "PreDefault"
+		},	
+	]
+}
