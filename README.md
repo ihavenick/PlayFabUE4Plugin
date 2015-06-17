@@ -39,6 +39,8 @@ Attach the node to an event, pass in the required variables and then attach what
 
 **That is all it takes!** The PlayFab nodes will send out the API call, wait for a response and pass back the response from the PlayFab servers. Take a look at their documentation to see what each API call returns and expects.
 
+Note: For the String array pins just make an empty array if you do not want specific key values returned but want them all.
+
 
 Legal info
 ----------
